@@ -45,7 +45,7 @@ export function Landing() {
               {link.label}
             </a>
           ))}
-          <a href="#" className="navbtn">
+          <a href="https://bubble.io" className="navbtn" target="_blank" rel="noopener noreferrer">
             Book a demo
           </a>
         </div>
