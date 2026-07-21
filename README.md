@@ -1,29 +1,35 @@
-# Relay — AI Orchestration Hero
+# Relay — AI Orchestration
 
-A single-page marketing hero demo for **Relay**, a fictional AI orchestration product.
+React landing page for **Relay**, a fictional AI orchestration product.
 
-## Preview locally
+Built with Vite + React + TypeScript.
 
-Open `index.html` in a browser, or serve the folder:
+## Getting started
 
 ```bash
-npx serve .
+npm install
+npm run dev
 ```
 
-Then visit the local URL it prints (usually `http://localhost:3000`).
+Open the local URL Vite prints (usually `http://localhost:5173`).
+
+## Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Typecheck and build for production |
+| `npm run preview` | Preview the production build locally |
 
 ## Structure
 
 ```
-.
-├── index.html          # Hero page
-├── assets/
-│   └── hero.png        # Background image
-└── README.md
+src/
+  App.tsx
+  main.tsx
+  index.css
+  assets/hero.png
+  components/
+    Landing.tsx
+    Landing.css
 ```
-
-## GitHub Pages
-
-After pushing to GitHub, enable Pages under **Settings → Pages** and set the source to the `main` branch (root). The site will be available at:
-
-`https://<your-username>.github.io/<repo-name>/`
