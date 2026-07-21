@@ -4,7 +4,7 @@ import './Landing.css'
 const navLinks = [
   { label: 'Product', href: '#' },
   { label: 'Customers', href: '#' },
-  { label: 'Pricing', href: '#' },
+  { label: 'Pricing', href: '#pricing' },
 ]
 
 const features = [
@@ -19,6 +19,31 @@ const features = [
   {
     title: 'Measure every run',
     body: 'Track quality, cost, speed, and business impact.',
+  },
+]
+
+const pricingTiers = [
+  {
+    title: 'Starter',
+    price: '$299',
+    billing: 'per month',
+    description: 'Perfect for teams just getting started with AI orchestration.',
+    ctaText: 'Get started',
+  },
+  {
+    title: 'Professional',
+    price: '$999',
+    billing: 'per month',
+    description: 'For growing teams needing advanced control and monitoring.',
+    ctaText: 'Get started',
+    featured: true,
+  },
+  {
+    title: 'Enterprise',
+    price: 'Custom',
+    billing: "Let's talk",
+    description: 'Dedicated support, custom integrations, and SLA guarantees.',
+    ctaText: 'Contact sales',
   },
 ]
 
@@ -70,6 +95,31 @@ export function Landing() {
             <a className="btn secondary" href="#">
               Watch the demo
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="pricing" id="pricing">
+        <div className="pricing-container">
+          <div className="pricing-header">
+            <h2>Simple, transparent pricing</h2>
+            <p className="pricing-subtext">Choose the plan that fits your needs.</p>
+          </div>
+          <div className="pricing-tiers">
+            {pricingTiers.map((tier) => (
+              <div
+                className={`pricing-card ${tier.featured ? 'featured' : ''}`}
+                key={tier.title}
+              >
+                <div className="tier-title">{tier.title}</div>
+                <div className="tier-price">{tier.price}</div>
+                <div className="tier-billing">{tier.billing}</div>
+                <p className="tier-description">{tier.description}</p>
+                <a href="#" className="btn pricing-btn">
+                  {tier.ctaText}
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
