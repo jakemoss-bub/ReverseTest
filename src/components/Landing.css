@@ -48,7 +48,7 @@ nav {
   color: #101820;
   display: grid;
   place-items: center;
-  font-family: Georgia, serif;
+  font-family: 'Instrument Serif', Georgia, serif;
   font-weight: bold;
 }
 
@@ -108,7 +108,7 @@ nav {
 
 h1 {
   margin: 0;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Instrument Serif', Georgia, serif;
   font-size: clamp(62px, 8.4vw, 118px);
   line-height: 0.89;
   letter-spacing: -0.065em;
@@ -204,5 +204,269 @@ h1 {
 
   .bottom .card:not(:first-child) {
     display: none;
+  }
+}
+
+/* ── Shared section layout ── */
+.section-inner {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* ── Logos bar ── */
+.logos-section {
+  background: #09131f;
+  padding: 64px 0;
+  border-top: 1px solid var(--line);
+}
+
+.logos-heading {
+  margin: 0 0 28px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.logos-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.logo-mark {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(247, 242, 231, 0.3);
+}
+
+/* ── Features section ── */
+.features-section {
+  background: #07101a;
+  padding: 120px 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-h2 {
+  margin: 0 0 12px;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: var(--cream);
+}
+
+.section-sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.feature-card {
+  padding: 28px 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feature-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.feature-title {
+  font-size: 16px;
+  color: var(--cream);
+}
+
+.feature-desc {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ── How it works ── */
+.how-section {
+  background: #09131f;
+  padding: 120px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.steps-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 56px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-num {
+  font-size: 80px;
+  font-weight: 300;
+  color: var(--gold);
+  opacity: 0.25;
+  line-height: 1;
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+.step-title {
+  font-size: 20px;
+  color: var(--cream);
+}
+
+.step-desc {
+  margin: 0;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── Testimonials ── */
+.testimonials-section {
+  background: #07101a;
+  padding: 120px 0;
+}
+
+.testimonials-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonial-card {
+  padding: 28px 24px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testimonial-quote {
+  margin: 0;
+  font-size: 15px;
+  color: var(--cream);
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 209, 102, 0.15);
+  color: var(--gold);
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.author-info strong {
+  font-size: 14px;
+  color: var(--cream);
+}
+
+.author-info span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ── CTA band ── */
+.cta-section {
+  background: linear-gradient(135deg, #07101a 0%, #0e1e2e 50%, #07101a 100%);
+  border-top: 1px solid var(--line);
+  padding: 120px 0;
+}
+
+.cta-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.cta-h2 {
+  margin: 0;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: var(--cream);
+}
+
+.cta-sub {
+  margin: 0;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.cta-inner .actions {
+  margin-top: 12px;
+  justify-content: center;
+}
+
+/* ── New sections mobile ── */
+@media (max-width: 760px) {
+  .logos-row {
+    gap: 24px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .step-num {
+    font-size: 56px;
+  }
+
+  .testimonials-row {
+    grid-template-columns: 1fr;
   }
 }
